@@ -1,0 +1,4 @@
+<h3>Book List</h3>
+@for (book of books; track $index) {
+    <app-book-preview [book]="book" (bookSelected)="selectBook($event)" />
+}

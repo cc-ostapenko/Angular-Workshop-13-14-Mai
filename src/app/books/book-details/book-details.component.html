@@ -1,0 +1,9 @@
+<pre>{{book | json}}</pre>
+@if(book) {
+    <h3>{{book.title}}</h3>
+    <p>Author: {{book.author}}</p>
+    <p><img src="{{book.cover}}" alt="{{book.title}}"></p>
+    <p>Details:<br>{{book.abstract}}</p>
+    <div [appOrderBtn]="book.author"></div>
+    <p>{{book.numPages | pages: "Num of pages:"}}</p>
+}
